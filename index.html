@@ -3784,7 +3784,7 @@
         const searchBox = document.getElementById("searchBox");
         searchForm.addEventListener("submit", (e) => {
           e.preventDefault();
-          const data = encodeURIComponent(searchBox.value);
+          const data = "'" + encodeURIComponent(searchBox.value);
           const response = fetch("https://script.google.com/macros/s/AKfycby7HRtzegYxG4185WRDh-MTa5de94l1d6eHeqiQK5k8o4gV553dEpsK4Ha6rOZCKT-a/exec", {
             method: "POST",
             headers: {
